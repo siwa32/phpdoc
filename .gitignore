@@ -2,6 +2,8 @@
 *
 
 !.gitignore
+!bin/
+!bin/**
 !LICENSE
 !Makefile
 !README.md
