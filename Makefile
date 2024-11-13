@@ -42,3 +42,12 @@ open:
 	else \
 		echo "Output file not found: output/php-chunked-xhtml/index.html"; \
 	fi
+
+open-modified:
+	PATHS=`php bin/getModifiedFilePath.php`; \
+	\
+	if [ -n "$$PATHS" ]; then \
+		open $$PATHS; \
+	else \
+		echo "Modified file not found"; \
+	fi
