@@ -44,10 +44,10 @@ open:
 	fi
 
 open-modified:
-	PATHS=`php bin/getModifiedFilePath.php`; \
-	\
+	@PATHS=$$(php bin/getModifiedFilePath.php); \
 	if [ -n "$$PATHS" ]; then \
-		open $$PATHS; \
+		echo "Opening: $$PATHS"; \
+		open $$PATHS || echo "Failed to open the file(s)."; \
 	else \
-		echo "Modified file not found"; \
+		echo "Modified file not found."; \
 	fi
