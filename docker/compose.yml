@@ -6,6 +6,8 @@ services:
       TZ: "Asia/Tokyo"
       LANG: "ja_JP.UTF-8"
     working_dir: /workspaces
+    ports:
+      - "127.0.0.1:8887:80"
     volumes:
       - ..:/workspaces
       - ../../doc-ja:/workspaces/ja

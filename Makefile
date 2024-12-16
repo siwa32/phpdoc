@@ -59,6 +59,9 @@ dc-up:
 	docker compose --file ./docker/compose.yml up -d
 dc-down:
 	docker compose --file ./docker/compose.yml down
+dc-reup:
+	docker compose --file ./docker/compose.yml down
+	docker compose --file ./docker/compose.yml up -d
 dc-start:
 	docker compose --file ./docker/compose.yml start
 dc-stop:

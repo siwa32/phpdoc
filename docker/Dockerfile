@@ -1,3 +1,7 @@
-FROM php:8.3-fpm-alpine
+FROM php:8.3-cli-alpine
 
 RUN apk update && apk add git make
+
+EXPOSE 80
+
+ENTRYPOINT ["php", "-S", "0.0.0.0:80", "-t", "/workspaces/output/php-chunked-xhtml/"]
