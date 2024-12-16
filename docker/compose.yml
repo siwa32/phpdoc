@@ -1,0 +1,11 @@
+services:
+  php:
+    build:
+      context: .
+    environment:
+      TZ: "Asia/Tokyo"
+      LANG: "ja_JP.UTF-8"
+    working_dir: /workspaces
+    volumes:
+      - ..:/workspaces
+      - ../../doc-ja:/workspaces/ja
