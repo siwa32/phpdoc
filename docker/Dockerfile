@@ -4,4 +4,5 @@ RUN apk update && apk add git make
 
 EXPOSE 80
 
-ENTRYPOINT ["php", "-S", "0.0.0.0:80", "-t", "/workspaces/output/php-chunked-xhtml/"]
+ENTRYPOINT ["php", "-S", "0.0.0.0:80"]
+CMD ["-t", "/workspaces/output/php-chunked-xhtml/"]
