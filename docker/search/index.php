@@ -142,7 +142,7 @@ $files_array = $json;
         const link = document.createElement('a');
         const re = new RegExp(keywords.join('|'), 'g');
         link.innerHTML = item.replace(re, '<span style="background-color:yellow">$&</span>');
-        link.href = `../${item}`;
+        link.href = `../${item}.html`;
         link.target = "phpdoc_blank"; // Open link in a new tab
         li.appendChild(link);
 
