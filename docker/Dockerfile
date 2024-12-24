@@ -1,6 +1,6 @@
 FROM php:8.3-cli-alpine
 
-RUN apk update && apk add git make
+RUN apk update && apk add git make openjdk11
 
 EXPOSE 80
 
