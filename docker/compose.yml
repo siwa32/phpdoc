@@ -12,11 +12,16 @@ services:
       - ..:/workspaces
       - ../../doc-ja:/workspaces/ja
       - ../../doc-en:/workspaces/en
+      - ./ini/php.ini:/usr/local/etc/php/conf.d/option.ini
   php84:
-    image: php:8.4-fpm-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.php84
     environment:
       TZ: "Asia/Tokyo"
       LANG: "ja_JP.UTF-8"
     working_dir: /sandbox
     volumes:
       - ../../sandbox:/sandbox
+      - ./ini/php84.ini:/usr/local/etc/php/conf.d/php84.ini
+    tty: true
