@@ -1,0 +1,7 @@
+FROM php:8.4-fpm-alpine
+
+RUN apk update && apk add git make
+
+RUN docker-php-ext-install \
+    bcmath \
+    opcache
