@@ -83,8 +83,6 @@ dc-destroy:
 ## ---------------------------------------
 dc-php:
 	docker compose --file docker/compose.yml exec php sh
-dc-php84:
-	docker compose --file docker/compose.yml exec php84 sh
 
 ## ---------------------------------------
 ## Docker composer informational
