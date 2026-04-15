@@ -58,34 +58,3 @@ open-modified:
 	else \
 		echo "Modified file not found."; \
 	fi
-
-## ---------------------------------------
-## Docker composer management
-## ---------------------------------------
-dc-up:
-	docker compose --file ./docker/compose.yml up -d
-dc-down:
-	docker compose --file ./docker/compose.yml down
-dc-reup:
-	docker compose --file ./docker/compose.yml down
-	docker compose --file ./docker/compose.yml up -d
-dc-start:
-	docker compose --file ./docker/compose.yml start
-dc-stop:
-	docker compose --file ./docker/compose.yml stop
-dc-build:
-	docker compose --file ./docker/compose.yml build
-dc-destroy:
-	docker compose --file docker/compose.yml down --rmi all --volumes
-
-## ---------------------------------------
-## Docker container console
-## ---------------------------------------
-dc-php:
-	docker compose --file docker/compose.yml exec php sh
-
-## ---------------------------------------
-## Docker composer informational
-## ---------------------------------------
-dc-ps:
-	docker compose --file docker/compose.yml ps
